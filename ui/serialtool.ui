@@ -1,0 +1,1337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>serailToolForm</class>
+ <widget class="QWidget" name="serailToolForm">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>873</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>串口调试工具</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="myresource.qrc">
+    <normaloff>:/network.jpg</normaloff>:/network.jpg</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <widget class="QFrame" name="comSetFrame">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="txtLabel1">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>选择串口</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="selectserialComboBox">
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+         </font>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <property name="duplicatesEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="frame">
+         <bool>true</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string>COM1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM6</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="txtLabel2">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>波特率</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="selectBuadComboBox">
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <kerning>false</kerning>
+         </font>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <property name="currentIndex">
+         <number>11</number>
+        </property>
+        <property name="duplicatesEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="frame">
+         <bool>true</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string>50</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>75</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>110</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>134</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>150</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>200</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>300</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>600</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1200</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2400</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>4800</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>9600</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>19200</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>38400</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>57600</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>115200</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>230400</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="txtLabel3">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>校验位</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="selsetTestbitComboBox">
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+         </font>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <property name="duplicatesEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="frame">
+         <bool>true</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string>无校验(NONE)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>偶校验(EVEN)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>奇校验(ODD)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>空校验(SPACE)</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="txtLabel4">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>数据位</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="selectDatabitComboBox">
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+         </font>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <property name="currentIndex">
+         <number>3</number>
+        </property>
+        <property name="duplicatesEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="frame">
+         <bool>true</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>7</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>8</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="txtLabel5">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>停止位</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="selectStopbitComboBox">
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+         </font>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <property name="duplicatesEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="frame">
+         <bool>true</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1.5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="serialstatusLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::WinPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="myresource.qrc">:/off.jpg</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="openCloseSerialPushButton">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::ActionsContextMenu</enum>
+        </property>
+        <property name="text">
+         <string>打开串口</string>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="comReceiveFrame">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="saveDataPushButton">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::ActionsContextMenu</enum>
+          </property>
+          <property name="text">
+           <string>保存数据</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="clearDisplayPushButton">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::ActionsContextMenu</enum>
+          </property>
+          <property name="text">
+           <string>清除显示</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="ceaseDisplayPushButton">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::ActionsContextMenu</enum>
+          </property>
+          <property name="text">
+           <string>停止接收</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="hexDisplaycheckBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>十六进制显示</string>
+          </property>
+          <property name="tristate">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="colorPushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>更改外观</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="selectPathPushButton">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::ActionsContextMenu</enum>
+          </property>
+          <property name="text">
+           <string>存储路径</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="displayPathLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::WinPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+          <property name="text">
+           <string>~/comdata.txt</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="txtLabel6">
+          <property name="text">
+           <string>接
+收
+显
+示
+区</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPlainTextEdit" name="comReceivePlainTextEdit">
+          <property name="cursor" stdset="0">
+           <cursorShape>ArrowCursor</cursorShape>
+          </property>
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::ClickFocus</enum>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::DefaultContextMenu</enum>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::WinPanel</enum>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="tabChangesFocus">
+           <bool>false</bool>
+          </property>
+          <property name="undoRedoEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="overwriteMode">
+           <bool>true</bool>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::TextSelectableByKeyboard</set>
+          </property>
+          <property name="backgroundVisible">
+           <bool>true</bool>
+          </property>
+          <property name="centerOnScroll">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="comSentFrame">
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="autoSentpushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>自动发送</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QLabel" name="txtLabel7">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>自动发送间隔</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="myQLineEdit" name="sentTimeLineEdit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
+            <property name="text">
+             <string>1000</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="txtLabel8">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>毫秒</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QLabel" name="txtLabel1_2">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>自动发送次数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="myQComboBox" name="autoSentTimesComboBox">
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <kerning>false</kerning>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::StrongFocus</enum>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::DefaultContextMenu</enum>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>true</bool>
+            </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <property name="maxVisibleItems">
+             <number>17</number>
+            </property>
+            <property name="insertPolicy">
+             <enum>QComboBox::InsertAtCurrent</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QComboBox::AdjustToContents</enum>
+            </property>
+            <property name="duplicatesEnabled">
+             <bool>false</bool>
+            </property>
+            <property name="frame">
+             <bool>true</bool>
+            </property>
+            <item>
+             <property name="text">
+              <string>1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>4</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>5</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>6</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>7</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>8</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>9</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>10</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>50</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>100</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>500</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>1000</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>5000</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>10000</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>无限</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="3">
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinAndMaxSize</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="txtLabel1_3">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>已发送次数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="sentTimesClearLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="autoFillBackground">
+             <bool>true</bool>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::WinPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="4">
+         <widget class="QPushButton" name="sentTimesPushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>次数清零</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <widget class="QPushButton" name="manualSentPushButton">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::ActionsContextMenu</enum>
+          </property>
+          <property name="text">
+           <string>手动发送</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QCheckBox" name="hexSentcheckBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>十六进制发送</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <item>
+           <widget class="QPushButton" name="selectFilePushButton">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::ActionsContextMenu</enum>
+            </property>
+            <property name="text">
+             <string>选择发送文件</string>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="fileNameLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::WinPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string>没有选择文件</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="clearSentPushButton">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::ActionsContextMenu</enum>
+          </property>
+          <property name="text">
+           <string>清空重填</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QPushButton" name="helpPushButton">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::ActionsContextMenu</enum>
+          </property>
+          <property name="text">
+           <string>关于</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QCheckBox" name="eolCheckBox">
+          <property name="text">
+           <string>CRLF</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QLabel" name="txtLabel9">
+          <property name="text">
+           <string>发
+送
+显
+示
+区</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="comSentTextEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="autoFormatting">
+           <set>QTextEdit::AutoAll</set>
+          </property>
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="statusCloseFrame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="txtLabel9_4">
+          <property name="text">
+           <string>状态：</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="comStatusLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::WinPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="txtLabel9_3">
+            <property name="text">
+             <string>发送(TX):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="comReceiveLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::WinPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="txtLabel9_2">
+            <property name="text">
+             <string>接收(RX):</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="comSentLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::WinPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="clearCountPushButton">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::ActionsContextMenu</enum>
+          </property>
+          <property name="text">
+           <string>清除计数</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="closeSelflPushButton">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::ActionsContextMenu</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>关闭程序</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/close.jpg</normalon>
+         </iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>myQComboBox</class>
+   <extends>QComboBox</extends>
+   <header location="global">myqcombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>myQLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header location="global">myqlineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="myresource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

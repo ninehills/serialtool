@@ -1,0 +1,12 @@
+<RCC>
+  <qresource>
+    <file>success.png</file>
+    <file>erroring.png</file>
+    <file>thank.png</file>
+    <file>error.jpg</file>
+    <file>close.jpg</file>
+    <file>on.jpg</file>
+    <file>network.jpg</file>
+    <file>off.jpg</file>
+  </qresource>
+</RCC>
