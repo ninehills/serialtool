@@ -6,7 +6,7 @@
 int main(int argc, char* argv[])
 {
 	QApplication app(argc, argv);
- 	QTextCodec::setCodecForTr(QTextCodec::codecForName("gb2312"));
+ 	QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
 	Q_INIT_RESOURCE(myresource);
 	
 	MyComTool tool;

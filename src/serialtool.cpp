@@ -80,7 +80,7 @@ void MyComTool::comStrat_Stop_Con()
 		{
 			path = ":/on.jpg";
 			serialstatusLabel->setPixmap(path);
-			openCloseSerialPushButton->setText(tr("¹Ø±Õ´®¿Ú"));
+			openCloseSerialPushButton->setText(tr("å…³é—­ä¸²å£"));
 			com_all_status.replace(5,  8, "Used    ");
 			com_status = true;
 			selectserialComboBox->setEnabled (false);
@@ -132,26 +132,26 @@ void MyComTool::comStrat_Stop_Con()
 			else
 				newtio.c_cflag = B9600;
 
-			if(com_Testbit == "ÎŞĞ£Ñé(NONE)")
+			if(com_Testbit == "æ— æ ¡éªŒ(NONE)")
 			{
     			newtio.c_cflag &= ~PARENB; 
 				newtio.c_iflag &= ~INPCK;
 				newtio.c_iflag |= IGNBRK;				
 			}
-			else if(com_Testbit == "Å¼Ğ£Ñé(EVEN)")
+			else if(com_Testbit == "å¶æ ¡éªŒ(EVEN)")
 			{
 				newtio.c_cflag |=  PARENB;
 	  			newtio.c_cflag &= ~PARODD;
 	 			newtio.c_iflag |= INPCK;
 	 			newtio.c_iflag |= IGNBRK;
 			}
-			else if(com_Testbit == "ÆæĞ£Ñé(ODD)")
+			else if(com_Testbit == "å¥‡æ ¡éªŒ(ODD)")
 			{
 				newtio.c_cflag |= (PARODD | PARENB);
 				newtio.c_iflag |= INPCK; 
 				newtio.c_iflag |= IGNBRK;
 			}
-			else if(com_Testbit == "¿ÕĞ£Ñé(SPACE)")
+			else if(com_Testbit == "ç©ºæ ¡éªŒ(SPACE)")
 			{
     			newtio.c_cflag &= ~PARENB; 
 				newtio.c_iflag &= ~INPCK;
@@ -261,7 +261,7 @@ void MyComTool::comStrat_Stop_Con()
 		path = ":/off.jpg";
 		serialstatusLabel->setPixmap(path);
 		com_all_status.replace(5, 8, "Closed  ");
-		openCloseSerialPushButton->setText(tr("´ò¿ª´®¿Ú"));
+		openCloseSerialPushButton->setText(tr("æ‰“å¼€ä¸²å£"));
 		com_status = false;
 		selectserialComboBox->setEnabled (true);
 		selectBuadComboBox->setEnabled (true);		
@@ -319,7 +319,7 @@ void MyComTool::ceaseCom_Receive()
 	{
 		dis_able = !isEnabled();
 		comReceivePlainTextEdit->setEnabled (dis_able);
-		ceaseDisplayPushButton->setText(tr("¿ªÊ¼½ÓÊÕ"));
+		ceaseDisplayPushButton->setText(tr("å¼€å§‹æ¥æ”¶"));
 		newtio.c_cflag &= ~CREAD;
 		tcflush(fd_com, TCIFLUSH);
 	  	tcsetattr(fd_com, TCSANOW, &newtio);				
@@ -329,7 +329,7 @@ void MyComTool::ceaseCom_Receive()
 	{
 		dis_able = isEnabled() ;
 		comReceivePlainTextEdit->setEnabled (dis_able);
-		ceaseDisplayPushButton->setText(tr("Í£Ö¹½ÓÊÕ"));
+		ceaseDisplayPushButton->setText(tr("åœæ­¢æ¥æ”¶"));
 		newtio.c_cflag |= CREAD;
 		tcflush(fd_com, TCIFLUSH);
 	  	tcsetattr(fd_com, TCSANOW, &newtio);				
@@ -344,7 +344,7 @@ void MyComTool::set_autoCom_Sent()
 	 if( auto_sent)
 	 {
 	 	comSentTextEdit->setReadOnly(true);
-	 	QString times = tr("ÎŞÏŞ");
+	 	QString times = tr("æ— é™");
 	 	if(times ==autoSentTimesComboBox->currentText())
 	 		sent_nolimited = true;
 	 	else
@@ -355,7 +355,7 @@ void MyComTool::set_autoCom_Sent()
 		auto_sent_time = atoi(sentTimeLineEdit->text().toAscii());
 		manualCom_Sent();
 		auto_sent_interval.start (auto_sent_time);
-	 	autoSentpushButton->setText(tr("Í£Ö¹·¢ËÍ"));
+	 	autoSentpushButton->setText(tr("åœæ­¢å‘é€"));
  		disable_autosent_setup = !isEnabled();
  		sentTimeLineEdit->setEnabled (disable_autosent_setup);
  		autoSentTimesComboBox->setEnabled (disable_autosent_setup);
@@ -365,7 +365,7 @@ void MyComTool::set_autoCom_Sent()
  	{
  		comSentTextEdit->setReadOnly(false);
  		auto_sent_interval.stop();
- 		autoSentpushButton->setText(tr("×Ô¶¯·¢ËÍ"));
+ 		autoSentpushButton->setText(tr("è‡ªåŠ¨å‘é€"));
  		disable_autosent_setup = isEnabled();
  		sentTimeLineEdit->setEnabled (disable_autosent_setup);
  		autoSentTimesComboBox->setEnabled (disable_autosent_setup);;	
@@ -391,7 +391,7 @@ void MyComTool::to_autoCom_Sent()
 		else
 		{
 			auto_sent = !auto_sent;
-			autoSentpushButton->setText(tr("×Ô¶¯·¢ËÍ"));
+			autoSentpushButton->setText(tr("è‡ªåŠ¨å‘é€"));
  			comSentTextEdit->setReadOnly(false);			
 	 		sentTimeLineEdit->setEnabled (true);
 	 		autoSentTimesComboBox->setEnabled (true);
@@ -404,12 +404,12 @@ void MyComTool::to_autoCom_Sent()
 void MyComTool::dis_Help_txt()
 {
 	QMessageBox msgBox(this);
-	QString	mymes = tr("´®¿Úµ÷ÊÔ¹¤¾ß 1.00.00 \n»ùÓÚQT4.6&Linux 2.6µÄ´®¿Úµ÷ÊÔ¹¤¾ß\nzhuhe<zhuhehz@yahoo.com.cn>\n<QQ :704227778>");
+	QString	mymes = tr("ä¸²å£è°ƒè¯•å·¥å…· 1.00.00 \nåŸºäºQT4.6&Linux 2.6çš„ä¸²å£è°ƒè¯•å·¥å…·\nzhuhe<zhuhehz@yahoo.com.cn>\n<QQ :704227778>");
 	QString pix;	
 	pix = ":/thank.png";
 	msgBox.setIconPixmap(pix);
-	msgBox.setWindowTitle(tr("¹ØÓÚ"));	
-	msgBox.setText(tr("\n\n\n¸ĞĞ»Ê¹ÓÃ±¾´®¿Úµ÷ÊÔ¹¤¾ß£¡"));
+	msgBox.setWindowTitle(tr("å…³äº"));	
+	msgBox.setText(tr("\n\n\næ„Ÿè°¢ä½¿ç”¨æœ¬ä¸²å£è°ƒè¯•å·¥å…·ï¼"));
     msgBox.setDetailedText (mymes);
  	msgBox.exec();
 }
@@ -472,9 +472,9 @@ void MyComTool::set_Save_Path()
 {
 	saveFileName = QFileDialog::getSaveFileName (
 																this,
-																tr("±£´æÎÄ¼ş"),
+																tr("ä¿å­˜æ–‡ä»¶"),
 																"~/comdata.txt",
-																tr("ÎÄ±¾ÎÄ¼ş(*.txt)"));
+																tr("æ–‡æœ¬æ–‡ä»¶(*.txt)"));
 				
 	if(saveFileName.isNull())
 		saveFileName = QDir::currentPath () + "/comdata.txt";
@@ -485,25 +485,25 @@ void MyComTool::open_Sent_File()
 {
 	openFileName = QFileDialog::getOpenFileName (
 																this,
-																tr("´ò¿ªÎÄ¼ş"),
+																tr("æ‰“å¼€æ–‡ä»¶"),
 																"/home",
-																tr("ÎÄ±¾ÎÄ¼ş(*.txt)"));
+																tr("æ–‡æœ¬æ–‡ä»¶(*.txt)"));
 	if(openFileName.isNull())
-		fileNameLabel->setText(tr("Ã»ÓĞÑ¡ÔñÎÄ¼ş"));		
+		fileNameLabel->setText(tr("æ²¡æœ‰é€‰æ‹©æ–‡ä»¶"));		
 	else					
 	{
 													
 			QFile sentFile(openFileName);
      		if (!sentFile.open(QIODevice::ReadOnly | QIODevice::Text))
      		{
-     			fileNameLabel->setText(tr("Ã»ÓĞÑ¡ÔñÎÄ¼ş"));	
+     			fileNameLabel->setText(tr("æ²¡æœ‰é€‰æ‹©æ–‡ä»¶"));	
      			QMessageBox fileMesBox(this);
      			QString my_pix;	
      			my_pix = ":/erroring.png";
 				QPixmap img(my_pix); 		
 				fileMesBox.setIconPixmap(my_pix);
-				fileMesBox.setWindowTitle(tr("´íÎó"));	
-				fileMesBox.setText(tr("ÎÄ¼şÎŞĞ§!"));
+				fileMesBox.setWindowTitle(tr("é”™è¯¯"));	
+				fileMesBox.setText(tr("æ–‡ä»¶æ— æ•ˆ!"));
 				fileMesBox.exec();
         	 	return;
        	 	}
@@ -562,9 +562,9 @@ void MyComTool::to_Save_File()
 	if(QFile::exists(saveFileName))
 	{
 		QMessageBox replaceBox(this);
-		replaceBox.setWindowTitle(tr("ÌáÊ¾"));	
-		replaceBox.setText(tr("     ¸ÃÎÄ¼şÒÑ¾­´æÔÚ!"));
-		replaceBox.setInformativeText(tr("        È·¶¨Ìæ»»Âë?"));
+		replaceBox.setWindowTitle(tr("æç¤º"));	
+		replaceBox.setText(tr("     è¯¥æ–‡ä»¶å·²ç»å­˜åœ¨!"));
+		replaceBox.setInformativeText(tr("        ç¡®å®šæ›¿æ¢ç ?"));
 		replaceBox.setStandardButtons(QMessageBox::Yes| QMessageBox::No);
 		replaceBox.setDefaultButton(QMessageBox::Yes);
 		int ret =  replaceBox.exec();
@@ -588,8 +588,8 @@ void MyComTool::to_Save_File()
 				mypix = ":/success.png";
 				QPixmap img(mypix); 		
 				saveMesBox.setIconPixmap(mypix);
-				saveMesBox.setWindowTitle(tr("ĞÅÏ¢"));	
-				saveMesBox.setText(tr("±£´æ³É¹¦!"));
+				saveMesBox.setWindowTitle(tr("ä¿¡æ¯"));	
+				saveMesBox.setText(tr("ä¿å­˜æˆåŠŸ!"));
 				saveMesBox.exec();
 	}
 	else
@@ -597,8 +597,8 @@ void MyComTool::to_Save_File()
 				mypix = ":/erroring.png";
 				QPixmap img(mypix); 		
 				saveMesBox.setIconPixmap(mypix);
-				saveMesBox.setWindowTitle(tr("ĞÅÏ¢"));	
-				saveMesBox.setText(tr("±£´æÊ§°Ü!"));
+				saveMesBox.setWindowTitle(tr("ä¿¡æ¯"));	
+				saveMesBox.setText(tr("ä¿å­˜å¤±è´¥!"));
 				saveMesBox.exec();
 	}		
 
@@ -654,8 +654,8 @@ void MyComTool::manualCom_Sent()
 				mypix = ":/erroring.png";
 				QPixmap img(mypix); 		
 				warningBox.setIconPixmap(mypix);
-				warningBox.setWindowTitle(tr("´íÎó"));	
-				warningBox.setText(tr("·¢ËÍÊı¾İ¹ı³¤!"));
+				warningBox.setWindowTitle(tr("é”™è¯¯"));	
+				warningBox.setText(tr("å‘é€æ•°æ®è¿‡é•¿!"));
 				warningBox.exec();
 				break;
 			 }
